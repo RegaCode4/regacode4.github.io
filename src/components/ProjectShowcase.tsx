@@ -9,6 +9,12 @@ export default function ProjectShowcase() {
   const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
 
   const categories = ['All', 'Fullstack', 'Frontend'];
+  // ── FILTER KATEGORI ────────────────────────────────────────
+  // Jika menambah kategori baru di types.ts dan data.ts,
+  // tambahkan juga string kategorinya di array di atas
+  // agar muncul sebagai tombol filter baru.
+  // ex: ['All', 'Fullstack', 'Frontend', 'Mobile', 'DevOps']
+  // ──────────────────────────────────────────────────────────
 
   const filteredProjects = selectedCategory === 'All'
     ? projectsData

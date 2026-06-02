@@ -71,12 +71,17 @@ export default function ContactForm() {
             </div>
 
             <div className="space-y-4">
+              {/* ── KONTAK INFO ──────────────────────────────────
+                  Ubah email, nomor WA, dan domisili di bawah ini.
+                  Untuk nomor WA: ganti angka di href="https://wa.me/62XXXXXXXXXX"
+                  ──────────────────────────────────────────────── */}
               <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/30 border border-slate-200/40 dark:border-slate-800/45">
                 <div className="p-3 bg-emerald-500/10 text-emerald-500 rounded-full">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-xs text-slate-550 dark:text-slate-450 font-bold uppercase tracking-wider">Email Utama</div>
+                  {/* Ganti email di href dan teks di bawah */}
                   <a href="mailto:regacode4@gmail.com" className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-500 transition">
                     regacode4@gmail.com
                   </a>
@@ -89,6 +94,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <div className="text-xs text-slate-550 dark:text-slate-450 font-bold uppercase tracking-wider">Kontak WhatsApp</div>
+                  {/* Ganti nomor di href (format: 62 + nomor tanpa 0 di depan) dan teks tampilan */}
                   <a href="https://wa.me/628000000000" className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-emerald-500 transition">
                     +62 822-xxxx-xxxx
                   </a>
@@ -101,6 +107,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <div className="text-xs text-slate-550 dark:text-slate-450 font-bold uppercase tracking-wider">Domisili</div>
+                  {/* Ganti teks domisili di bawah jika pindah kota */}
                   <div className="text-sm font-semibold text-slate-800 dark:text-slate-200">
                     Padang, Sumatera Barat, Indonesia
                   </div>
@@ -109,6 +116,9 @@ export default function ContactForm() {
             </div>
 
             {/* Quick stats panel */}
+            {/* ── STATISTIK SINGKAT ────────────────────────────
+                Ubah angka 99% dan 15+ sesuai pencapaian terkini
+                ─────────────────────────────────────────────── */}
             <div className="grid grid-cols-2 gap-4 border-t border-slate-255 dark:border-slate-855 pt-6">
               <div>
                 <div className="text-2xl md:text-3xl font-display font-extrabold text-slate-900 dark:text-white">99%</div>

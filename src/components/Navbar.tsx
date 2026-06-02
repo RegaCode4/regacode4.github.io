@@ -25,6 +25,11 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   }, []);
 
   const navLinks = [
+    // ── NAVIGASI ─────────────────────────────────────────────
+    // Tambah / ubah / hapus item menu navbar di sini.
+    // 'href' harus sesuai dengan id section di halaman
+    // (ex: id="projects" → href: '#projects')
+    // ─────────────────────────────────────────────────────────
     { name: 'About Me', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
@@ -89,6 +94,13 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           </div>
 
           {/* Download CV button redirected to GitHub */}
+          {/* ── TOMBOL NAVBAR KANAN ──────────────────────────
+              Saat ini mengarah ke GitHub profile.
+              Untuk menambahkan tombol Download CV:
+              ganti href ke link Google Drive / direct PDF,
+              ubah teks 'GitHub Profile' → 'Download CV',
+              dan ganti ikon Github → Download dari lucide-react
+              ─────────────────────────────────────────────── */}
           <a
             id="nav-github-btn"
             href="https://github.com/RegaCode4"

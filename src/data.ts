@@ -1,5 +1,28 @@
 import { Project, Experience, SkillCategory, Testimonial } from './types';
 
+// ============================================================
+// DATA UTAMA PORTFOLIO
+// File ini adalah satu-satunya tempat untuk mengubah konten
+// portfolio. Tidak perlu menyentuh file komponen lain.
+// ============================================================
+
+// ------------------------------------------------------------
+// PROJECTS — Tambah / edit / hapus proyek di sini
+// Setiap objek mewakili satu kartu proyek di halaman Projects.
+//
+// Field wajib:
+//   id          : string unik, huruf kecil tanpa spasi (ex: 'my-project')
+//   title       : judul proyek lengkap
+//   shortDescription : teks singkat yang tampil di kartu
+//   description : penjelasan teknis panjang (tampil di drawer "Lihat Detail")
+//   tags        : array teknologi yang dipakai
+//   category    : 'Fullstack' | 'Frontend' | 'Mobile' | 'DevOps'
+//                 (nilai ini dipakai oleh filter tab di ProjectShowcase)
+//   githubUrl   : link ke repo GitHub
+//   demoUrl     : link live demo — isi '#' jika belum ada
+//   featured    : true = tampilkan badge ⭐ Unggulan
+//   achievements: array poin pencapaian (tampil di drawer detail)
+// ------------------------------------------------------------
 export const projectsData: Project[] = [
   {
     id: 'kargoin',
@@ -66,6 +89,21 @@ export const projectsData: Project[] = [
   }
 ];
 
+// ------------------------------------------------------------
+// EXPERIENCES — Tambah / edit riwayat pekerjaan di sini
+// Urutan array = urutan tampil di timeline (paling atas = terbaru)
+//
+// Field wajib:
+//   id      : string unik (ex: 'exp4')
+//   role    : nama jabatan / posisi
+//   company : nama perusahaan
+//   location: kota + negara (ex: 'Padang, Sumatera Barat, Indonesia')
+//   period  : rentang waktu (ex: '2024 - Sekarang')
+//   current : true jika ini pekerjaan aktif saat ini (dot hijau di timeline)
+//   description : ringkasan tanggung jawab
+//   bullets : array pencapaian spesifik (maks 3-4 poin idealnya)
+//   skills  : array nama teknologi yang dipakai di posisi ini
+// ------------------------------------------------------------
 export const experiencesData: Experience[] = [
   {
     id: 'exp1',
@@ -114,6 +152,21 @@ export const experiencesData: Experience[] = [
   }
 ];
 
+// ------------------------------------------------------------
+// SKILLS — Ubah level keahlian atau tambah skill baru di sini
+//
+// Struktur: array kategori, masing-masing punya array skills.
+// Untuk menambah KATEGORI baru: tambah objek { name, skills[] }
+// Untuk menambah SKILL baru dalam kategori: tambah objek di
+// dalam array skills kategori yang sesuai.
+//
+// Field skill:
+//   name     : nama teknologi/skill yang ditampilkan
+//   level    : angka 0-100 (persentase progress bar)
+//   iconName : label internal — saat ini belum dipakai untuk render
+//              ikon, tapi bisa dimanfaatkan nanti jika ingin
+//              menambahkan ikon SVG per skill
+// ------------------------------------------------------------
 export const skillsData: SkillCategory[] = [
   {
     name: 'Frontend Technologies',
@@ -147,6 +200,20 @@ export const skillsData: SkillCategory[] = [
   }
 ];
 
+// ------------------------------------------------------------
+// TESTIMONIALS — Tambah testimoni klien / rekan kerja di sini
+// (saat ini belum ditampilkan di halaman, tapi data sudah siap)
+//
+// Field wajib:
+//   id        : string unik (ex: 't3')
+//   name      : nama pemberi testimoni
+//   role      : jabatan mereka
+//   company   : nama perusahaan mereka
+//   content   : isi kutipan testimoni
+//   avatarUrl : URL foto profil (opsional) — gunakan Unsplash atau
+//               upload foto sendiri ke folder /assets lalu isi
+//               path relatifnya, contoh: '/assets/avatar-budi.jpg'
+// ------------------------------------------------------------
 export const testimonialsData: Testimonial[] = [
   {
     id: 't1',
